@@ -1,0 +1,36 @@
+2017-11-27 10:32:47,740 [8] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateNewPhoneRequests
+2017-11-27 10:33:07,989 [8] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Check CBqTBKtqVKCsZiWdD7gpmWPcrbQVS87KTN 0
+2017-11-27 10:33:12,412 [8] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateNewPhoneRequests
+2017-11-27 12:17:14,047 [8] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateNewPhoneRequests
+2017-11-27 12:17:20,361 [8] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Check CBqTBKtqVKCsZiWdD7gpmWPcrbQVS87KTN 0 User 1
+2017-11-27 12:17:29,800 [8] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateNewPhoneRequests
+2017-11-27 12:25:03,863 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateBitCoinTestForUser: 1
+2017-11-27 12:25:17,629 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateBitCoinTestForUser
+2017-11-27 12:25:38,811 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateNewPhoneRequests
+2017-11-27 12:25:49,175 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Check CBqTBKtqVKCsZiWdD7gpmWPcrbQVS87KTN 0 User 1
+2017-11-27 12:25:51,733 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateNewPhoneRequests
+2017-11-27 12:26:33,279 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: FaucetBitCoinTestNetwork
+2017-11-27 12:27:44,742 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: FaucetBitCoinTestNetwork
+2017-11-27 12:28:43,017 [36] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateNewPhoneRequests
+2017-11-27 12:28:57,868 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Check CBqTBKtqVKCsZiWdD7gpmWPcrbQVS87KTN 650000 User 1
+2017-11-27 12:29:15,739 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateNewPhoneRequests
+2017-11-27 12:42:47,081 [64] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateBitCoinTestForUser: 1
+2017-11-27 12:42:49,950 [64] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateBitCoinTestForUser
+2017-11-27 12:58:00,584 [9] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateBitCoinForUser: 1
+2017-11-27 12:58:01,541 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Address: 1F96viT3PTcK97mWESGdt4WYGCjrD6t3sj
+2017-11-27 12:58:01,542 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Private: 8a3177b3c929d03d79fc361c850399697fed1be4875bd60ebd6a30228f6469ee
+2017-11-27 12:58:01,542 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Public: 0374fe133df49d24c1cf4cc70d22dfb40f1d9343d94b7e4e9867c254d3e75a9dd3
+2017-11-27 12:58:01,579 [10] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateBitCoinForUser
+2017-11-27 13:13:29,441 [9] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateEthereumForUser: 1
+2017-11-27 13:13:30,474 [5] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Address: a0e9c251188822a1dbc63aa737c01342bbf62189
+2017-11-27 13:13:30,475 [5] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Private: c3e7165d01b7c24240dbc915ec54b91315f4afc5323ff7d15abe16e2b5abbf10
+2017-11-27 13:13:30,475 [5] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Public: 04827617a490982a9c0b1a5546afdd67bf4f8bb1dbff830ee5aa0372d1f723821edb9ca1ed09fddb35794d8a4b69bc36bd955a92dc79889e4632776073b77d03e1
+2017-11-27 13:13:30,517 [5] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateEthereumForUser
+2017-11-27 13:23:25,827 [23] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateBitCoinForUser: 1
+2017-11-27 13:23:25,880 [23] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateBitCoinForUser
+2017-11-27 13:27:41,491 [30] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateEthereumForUser: 1
+2017-11-27 13:27:41,513 [30] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateEthereumForUser
+2017-11-27 13:31:06,368 [43] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateEthereumForUser: 1
+2017-11-27 13:31:06,372 [43] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateEthereumForUser
+2017-11-27 13:31:10,078 [44] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - Run: GenerateBitCoinForUser: 1
+2017-11-27 13:31:10,082 [44] INFO  BitCoinRhNetwork.Controllers.DataController [(null)] - End: GenerateBitCoinForUser

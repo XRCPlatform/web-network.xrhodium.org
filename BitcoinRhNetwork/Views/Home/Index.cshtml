@@ -1,0 +1,126 @@
+﻿@using BitCoinRhNetwork.Controllers
+@using NBitcoin.RPC
+@model HomeViewModel
+
+@section scriptsData {
+<script type="text/javascript">
+    var peers = [
+    @foreach (var item in Model.PeerInfo)
+    {
+        @Html.Raw("{ lng: " + item.Longitude + ", lat: " + item.Latitude + " }," + Environment.NewLine)
+    }
+        ];
+</script>
+}
+
+@section scripts {
+    <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+    <script type="text/javascript">
+        App.setOptions({
+            spa: false
+        });
+
+        dashboardPage(peers);
+
+        function _formatter(value, decimal, unit) {
+            if (value === 0) {
+                return '0 ' + unit;
+            } else {
+                var si = [
+                    { value: 1, symbol: "" },
+                    { value: 1e3, symbol: "k" },
+                    { value: 1e6, symbol: "M" },
+                    { value: 1e9, symbol: "G" },
+                    { value: 1e12, symbol: "T" },
+                    { value: 1e15, symbol: "P" },
+                    { value: 1e18, symbol: "E" },
+                    { value: 1e21, symbol: "Z" },
+                    { value: 1e24, symbol: "Y" },
+                ];
+                for (var i = si.length - 1; i > 0; i--) {
+                    if (value >= si[i].value) {
+                        break;
+                    }
+                }
+                return (value / si[i].value).toFixed(decimal).replace(/\.0+$|(\.[0-9]*[1-9])0+$/, "$1") + ' ' + si[i].symbol + unit;
+            }
+        }
+
+        $(document).ready(function () {
+            $('#networkHashRate').text(_formatter(parseFloat('@Model.MiningInfo.NetworkHashps'), 5, 'H/s'));
+            $('#networkDifficulty').text(_formatter(parseFloat('@Model.MiningInfo.Difficulty'), 5, ''));
+        });
+    </script>
+}
+
+@section links {
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+    <style>
+        .map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+}
+
+
+<div class="sidebar">
+    <div class="dashboard-widget">
+        <div class="title">
+            <i class="fa fa-signal"></i> NETWORK INFO
+        </div>
+        <div class="content overflow-none">
+            <div class="sidebar-widget img-info">
+                <a href="https://www.xrhodium.org/En/StrongHandsAirdrop">
+                    <img src="~/theme/airdrop.jpg?v2" alt="AirDrop to xRhodium Holders" />
+                </a>
+            </div>
+            <div class="sidebar-widget network-info">
+                @if (Model.MiningInfo != null)
+                {
+                    <p>Network's Hash Rate: <br /><strong><span id="networkHashRate"></span></strong></p>
+                    <p>Network Difficulty: <br /><strong><span id="networkDifficulty"></span></strong></p>
+                    <p>Blocks: <br /><strong><span>@Model.MiningInfo.Blocks</span></strong></p>
+
+                }
+            </div>
+            <div class="sidebar-widget">
+                <div class="sidebar-widget-subtitle">Links</div>
+                <ul class="list no-style">
+                    <li><i class="fa fa-globe"></i> <a href="https://www.xrhodium.org/">xRhodium WebSite</a></li>
+                    <li><i class="fa fa-globe"></i> <a href="https://www.electrumxrc.org/">Electrum Wallet</a></li>
+                    <li><i class="fa fa-globe"></i> <a href="https://explorer.xrhodium.org/">xRhodium Explorer</a></li>
+                    <li><i class="fa fa-globe"></i> <a href="http://poolcore.xrhodium.org/">xRhodium Mining Pool</a></li>
+                    <li><i class="fa fa-globe"></i> <a href="https://blockcore.xrhodium.org/">Blockcore Wallet</a></li>
+                    <li><i class="fa fa-globe"></i> <a href="https://www.fmone.org/">FreeMarket One</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="sidebar-page">
+    <div class="dashboard-widget">
+        <div class="title">
+            NETWORK NODES
+        </div>
+        <div class="content">
+            <div id="tracking-map"></div>
+            <div class="divider"></div>
+            <div class="grid grid-6">
+                <div class="social-bar social-bar-primenode">
+                    <div>Prime network nodes</div>
+                    <span id="primenode-count">18</span>
+                </div>
+            </div>
+            <div class="grid grid-6">
+                <div class="social-bar social-bar-others">
+                    <div>Other nodes</div>
+                    <span id="others-count">
+                        @(Model.PeerInfo.Count())
+                    </span>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
